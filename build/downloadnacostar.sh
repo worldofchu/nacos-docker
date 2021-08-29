@@ -1,0 +1,1 @@
+wget  https://github.com/worldofchu/nacos/releases/download/2.0.3-postgresql/nacos-server-2.0.3-postgresql.tar.gz
