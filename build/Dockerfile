@@ -28,7 +28,7 @@ WORKDIR $BASE_DIR
 RUN set -x \
     && yum update -y \
     && yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel wget iputils nc  vim libcurl
-ADD nacos-server-${NACOS_VERSION}.tar.gz   /home
+COPY nacos-server-${NACOS_VERSION}.tar.gz   /home/nacos-server-${NACOS_VERSION}.tar.gz
 RUN tar -xzvf /home/nacos-server-${NACOS_VERSION}.tar.gz -C /home \
     && rm -rf /home/nacos-server-${NACOS_VERSION}.tar.gz /home/nacos/bin/* /home/nacos/conf/*.properties /home/nacos/conf/*.example /home/nacos/conf/nacos-mysql.sql /home/nacos/conf/nacos-postgresql.sql
 RUN yum autoremove -y wget \
